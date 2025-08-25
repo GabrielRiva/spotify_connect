@@ -1,5 +1,5 @@
 # Base da imagem dos add-ons oficiais do HA
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:14.3.2
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest
 FROM ${BUILD_FROM}
 
 # Instala dependências para compilar o librespot
