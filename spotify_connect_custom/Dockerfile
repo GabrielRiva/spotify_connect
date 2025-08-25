@@ -1,5 +1,5 @@
-# Base da imagem dos add-ons oficiais do HA (Debian slim + S6 overlay)
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:14.3.2
+# Base da imagem dos add-ons oficiais do HA
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:14.3.2
 FROM ${BUILD_FROM}
 
 # Instala dependências para compilar o librespot
@@ -8,8 +8,8 @@ RUN apk add --no-cache \
     rust \
     build-base \
     pulseaudio \
+    pulseaudio-dev \
     alsa-utils \
-    libpulseaudio-dev \
     alsa-lib-dev \
     dbus \
     dbus-dev \
