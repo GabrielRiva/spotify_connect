@@ -1,0 +1,18 @@
+name: "Spotify Connect (Custom)"
+version: "0.16.0-custom"
+slug: "spotify_connect_custom"
+description: "Play Spotify music on your Home Assistant device (librespot v0.7.0)"
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+options:
+  name: "Home Assistant Spotify"
+schema:
+  name: str
+ports:
+  5000/tcp: null
+map:
+  - config:rw
+  - media:rw
