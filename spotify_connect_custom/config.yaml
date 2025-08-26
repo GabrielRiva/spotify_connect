@@ -1,5 +1,5 @@
 name: "Spotify Connect (Custom)"
-version: "0.16.0-custom"
+version: "0.16.1-custom"
 slug: "spotify_connect_custom"
 description: "Play Spotify music on your Home Assistant device (librespot v0.7.0)"
 arch:
