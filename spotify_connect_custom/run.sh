@@ -3,7 +3,7 @@ set -e
 
 echo "[INFO] Starting Spotify Connect (librespot v0.7.0)..."
 
-exec librespot \
+exec /usr/bin/librespot \
     --name "${HASSIO_NAME:-Home Assistant Spotify}" \
     --backend pulseaudio \
     --bitrate 320 \
