@@ -4,16 +4,20 @@ FROM ${BUILD_FROM}
 
 # Instala dependências para compilar o librespot
 RUN apk add --no-cache \
-    cargo \
-    rust \
     build-base \
+    git \
     pulseaudio \
     pulseaudio-dev \
     alsa-utils \
     alsa-lib-dev \
     dbus \
     dbus-dev \
+    curl \
     && rm -rf /var/cache/apk/*
+
+# Instala o Rust mais recente (via rustup, garante compatibilidade)
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
 
 # Compila e instala o librespot v0.7.0
 WORKDIR /usr/src
